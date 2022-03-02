@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+    <script type="text/javascript">
+        $.fn.maphilight.defaults = {
+            fill: true,
+            fillColor: '3d2d3d',
+            fillOpacity: 0.2,
+            stroke: true,
+            strokeColor: 'efefef',
+            strokeOpacity: 1,
+            strokeWidth: 3,
+            fade: true,
+            alwaysOn: false,
+            neverOn: false,
+            groupBy: false,
+            wrapClass: true,
+            shadow: false,
+            shadowX: 0,
+            shadowY: 0,
+            shadowRadius: 6,
+            shadowColor: '9f9f9f',
+            shadowOpacity: 0.8,
+            shadowPosition: 'outside',
+            shadowFrom: false
+        }
+        function highlight(clz) {
+            $(clz).maphilight();
+        }
+    </script>
+</head>
+<img src="images/Zaxis_200.png" usemap="#equipment" class="equipment-map">
+<map name="equipment">
+    <area target="" alt="Travel Device" title="Travel Device" href="travel-device.html" coords="413,610,26" shape="circle" onmouseover="javascript:highlight('.equipment-map');">
+    <area target="" alt="Upper Roller" title="Upper Roller" href="upper-roller.html" coords="605,539,13" shape="circle" onmouseover="javascript:highlight('.equipment-map');">
+</map>
+</html>
