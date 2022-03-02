@@ -1,0 +1,314 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+    <script type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script src="scripts/jquery.rwdImageMaps.min.js"></script>
+
+    
+    
+    <style>
+    
+        img[usemap] {
+                border: none;
+                height: auto;
+                max-width: 100%;
+                width: auto;
+        }
+    
+        .divTable {
+            display: table;
+            width: 100%;
+        }
+
+        .divTableRow {
+            display: table-row;
+        }
+
+        .divTableHeading {
+            background-color: #EEE;
+            display: table-header-group;
+        }
+
+        .divTableCell,
+        .divTableHead {
+            border: 1px solid #ffffff;
+            display: table-cell;
+            padding: 3px 10px;
+        }
+
+        .divTableHeading {
+            background-color: #EEE;
+            display: table-header-group;
+            font-weight: bold;
+        }
+
+        .divTableFoot {
+            background-color: #EEE;
+            display: table-footer-group;
+            font-weight: bold;
+        }
+
+        .divTableBody {
+            display: table-row-group;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        $.fn.maphilight.defaults = {
+            fill: true,
+            fillColor: '000000',
+            fillOpacity: 0.2,
+            stroke: true,
+            strokeColor: '0f0f0f',
+            strokeOpacity: 1,
+            strokeWidth: 3,
+            fade: true,
+            alwaysOn: false,
+            neverOn: false,
+            groupBy: false,
+            wrapClass: true,
+            shadow: false,
+            shadowX: 0,
+            shadowY: 0,
+            shadowRadius: 6,
+            shadowColor: '00r0r0',
+            shadowOpacity: 0.8,
+            shadowPosition: 'outside',
+            shadowFrom: false
+        }
+        function highlight(clz) {
+            $(clz).maphilight();
+        }
+        function highlightRow(srcObj, targetID) {
+            srcObj.href = targetID;
+            $(targetID).effect("highlight", {
+                color: '#effdeb', border: '2px solid #32a511'
+            }, 3000);
+        }
+
+        function confirmFn() {
+            $('#msg').fadeIn();
+            $('#msg').effect("highlight", {
+                color: '#effdeb', border: '2px solid #32a511'},5000);
+            $("#msg").fadeOut();
+            
+        }
+    </script>
+</head>
+
+<body>
+    <!-- I'd ideally want these parameters applied for the image width="900" height="560"-->
+<div style="margin-bottom: 50px;">
+    <img src="images/UpperRoller.png" usemap="#upper-roller" class="upperroller-map">
+
+    <map name="upper-roller">
+        <area target="" alt="00G" title="00G" onclick="javascript:highlightRow(this,'#00G');" coords="304,1035,18" shape="circle"
+            onmouseover="javascript:highlight('.upperroller-map');">
+        <area target="" alt="00F" title="00F" onclick="javascript:highlightRow(this,'#00F');" coords="395,999,63" shape="circle"
+            onmouseover="javascript:highlight('.upperroller-map');">
+        <area target="" alt="00E" title="00E" onclick="javascript:highlightRow(this,'#00E');" coords="518,941,29" shape="circle"
+            onmouseover="javascript:highlight('.upperroller-map');">
+        <area target="" alt="00D" title="00D" onclick="javascript:highlightRow(this,'#00D');" coords="594,894,39" shape="circle"
+            onmouseover="javascript:highlight('.upperroller-map');">
+        <area target="" alt="00B2" title="00B2" onclick="javascript:highlightRow(this,'#00B2');" coords="687,849,53" shape="circle"
+            onmouseover="javascript:highlight('.upperroller-map');">
+        <area target="" alt="00B1" title="00B1" onclick="javascript:highlightRow(this,'#00B1');" coords="906,743,164" shape="circle"
+            onmouseover="javascript:highlight('.upperroller-map');">
+        <area target="" alt="00B3" title="00B3" onclick="javascript:highlightRow(this,'#00B3');" coords="1110,623,52" shape="circle"
+            onmouseover="javascript:highlight('.upperroller-map');">
+        <area target="" alt="00C" title="00C" onclick="javascript:highlightRow(this,'#00C');" coords="1211,570,49" shape="circle"
+            onmouseover="javascript:highlight('.upperroller-map');">
+        <area target="" alt="00A2" title="00A2" onclick="javascript:highlightRow(this,'#00A2');"
+            coords="1273,507,1493,391,1526,413,1533,452,1314,565,1285,555,1273,533" shape="poly"
+            onmouseover="javascript:highlight('.upperroller-map');">
+        <area target="" alt="00A1" title="00A1" onclick="javascript:highlightRow(this,'#00A1');"
+            coords="1536,303,1526,384,1560,437,1597,445,1626,432,1641,452,1683,475,1759,432,1757,346,1708,319,1678,290,1641,285,1611,265,1575,280"
+            shape="poly" onmouseover="javascript:highlight('.upperroller-map');">
+        <area target="" alt="01" title="01" onclick="javascript:highlightRow(this,'#01');" coords="1637,221,1546,37" shape="rect"
+            onmouseover="javascript:highlight('.upperroller-map');">
+        <area target="" alt="01" title="01" onclick="javascript:highlightRow(this,'#01');" coords="1740,91,1653,273" shape="rect"
+            onmouseover="javascript:highlight('.upperroller-map');">
+    </map>
+
+</div>
+<h1>Upper Roller</h1>
+<h2>The roller on top to support track shoes as well as well rolling for traveling</h2>
+<div id="msg" style="display: none;">Added to cart, successfully'</div>
+<div class="divTable">
+    <div class="divTableHeading">
+        <div class="divTableCell">Code</div>
+        <div class="divTableCell">Part No.</div>
+        <div class="divTableCell">Q'ty</div>
+        <div class="divTableCell">Part Name</div>
+        <div class="divTableCell">Alternate Part No.</div>
+        <div class="divTableCell">Alternate Part Q'ty</div>
+        <div class="divTableCell">Description</div>
+        <div class="divTableCell">Action</div>
+    </div>
+
+    <div class="divTableBody">
+        <div class="divTableRow">
+            <div class="divTableCell">&nbsp;</div>
+            <div class="divTableCell">9235892</div>
+            <div class="divTableCell"><input type="text" value="4" /></div>
+            <div class="divTableCell">Upper Roller</div>
+            <div class="divTableCell">YA60038399</div>
+            <div class="divTableCell"><input type="text" value="4" /></div>
+            <div class="divTableCell">Whole Upper Roller Unit</div>
+            <div class="divTableCell"><input type="button" value="Add to Cart" onclick="javascript:confirmFn();"/></div>
+        </div>
+        <div id='00A' class="divTableRow">
+            <div class='divTableCell'>00A</div>
+            <div class='divTableCell'>9234985</div>
+            <div class='divTableCell'><input type='text' value='1' /></div>
+            <div class='divTableCell'>BRACKET</div>
+            <div class='divTableCell'></div>
+            <div class='divTableCell'><input type='text' value='' /></div>
+            <div class='divTableCell'>Bracket for supporting</div>
+            <div class="divTableCell"><input type="button" value="Add to Cart" onclick="javascript:confirmFn();"/></div>
+        </div>
+        <div id='00A1' class="divTableRow">
+            <div class='divTableCell'>00A1</div>
+            <div class='divTableCell'>2050981</div>
+            <div class='divTableCell'><input type='text' value='1' /></div>
+            <div class='divTableCell'>BRACKET</div>
+            <div class='divTableCell'></div>
+            <div class='divTableCell'><input type='text' value='' /></div>
+            <div class='divTableCell'>Bracket for supporting</div>
+            <div class="divTableCell"><input type="button" value="Add to Cart" onclick="javascript:confirmFn();"/></div>
+        </div>
+        <div id='00A2' class="divTableRow">
+            <div class='divTableCell'>00A2</div>
+            <div class='divTableCell'>3101035</div>
+            <div class='divTableCell'><input type='text' value='1' /></div>
+            <div class='divTableCell'>SHAFT</div>
+            <div class='divTableCell'></div>
+            <div class='divTableCell'><input type='text' value='' /></div>
+            <div class='divTableCell'>Rolling shaft</div>
+            <div class="divTableCell"><input type="button" value="Add to Cart" onclick="javascript:confirmFn();"/></div>
+        </div>
+        <div id='00B' class="divTableRow">
+            <div class='divTableCell'>00B</div>
+            <div class='divTableCell'>9300912</div>
+            <div class='divTableCell'><input type='text' value='1' /></div>
+            <div class='divTableCell'>ROLLER</div>
+            <div class='divTableCell'></div>
+            <div class='divTableCell'><input type='text' value='' /></div>
+            <div class='divTableCell'>Roller </div>
+            <div class="divTableCell"><input type="button" value="Add to Cart" onclick="javascript:confirmFn();"/></div>
+        </div>
+        <div id='00B1' class="divTableRow">
+            <div class='divTableCell'>00B1</div>
+            <div class='divTableCell'>7056582</div>
+            <div class='divTableCell'><input type='text' value='1' /></div>
+            <div class='divTableCell'>ROLLER</div>
+            <div class='divTableCell'></div>
+            <div class='divTableCell'><input type='text' value='' /></div>
+            <div class='divTableCell'>Roller </div>
+            <div class="divTableCell"><input type="button" value="Add to Cart" onclick="javascript:confirmFn();"/></div>
+        </div>
+        <div id='00B2' class="divTableRow">
+            <div class='divTableCell'>00B2</div>
+            <div class='divTableCell'>3115657</div>
+            <div class='divTableCell'><input type='text' value='1' /></div>
+            <div class='divTableCell'>BUSHING</div>
+            <div class='divTableCell'></div>
+            <div class='divTableCell'><input type='text' value='' /></div>
+            <div class='divTableCell'>Bushing for roller</div>
+            <div class="divTableCell"><input type="button" value="Add to Cart" onclick="javascript:confirmFn();"/></div>
+        </div>
+        <div id='00B3' class="divTableRow">
+            <div class='divTableCell'>00B3</div>
+            <div class='divTableCell'>3115658</div>
+            <div class='divTableCell'><input type='text' value='1' /></div>
+            <div class='divTableCell'>BUSHING</div>
+            <div class='divTableCell'></div>
+            <div class='divTableCell'><input type='text' value='' /></div>
+            <div class='divTableCell'>Bushing for roller</div>
+            <div class="divTableCell"><input type="button" value="Add to Cart" onclick="javascript:confirmFn();"/></div>
+        </div>
+        <div id="00D" class="divTableRow">
+            <div class='divTableCell'>00D</div>
+            <div class='divTableCell'>4614277</div>
+            <div class='divTableCell'><input type='text' value='1' /></div>
+            <div class='divTableCell'>WASHER</div>
+            <div class='divTableCell'>YA00041389</div>
+            <div class='divTableCell'><input type='text' value='1' /></div>
+            <div class='divTableCell'>Washer for roller</div>
+            <div class="divTableCell"><input type="button" value="Add to Cart" onclick="javascript:confirmFn();"/></div>
+        </div>
+        <div id='00C' class="divTableRow">
+            <div class='divTableCell'>00C</div>
+            <div class='divTableCell'>4317584</div>
+            <div class='divTableCell'><input type='text' value='1' /></div>
+            <div class='divTableCell'>SEAL;GROUP</div>
+            <div class='divTableCell'></div>
+            <div class='divTableCell'><input type='text' value='' /></div>
+            <div class='divTableCell'>Seals for rolling </div>
+            <div class="divTableCell"><input type="button" value="Add to Cart" onclick="javascript:confirmFn();"/></div>
+        </div>
+        <div id='00E' class="divTableRow">
+
+            <div class='divTableCell'>00E</div>
+            <div class='divTableCell'>M351020</div>
+            <div class='divTableCell'><input type='text' value='2' /></div>
+            <div class='divTableCell'>BOLT;SOCKET</div>
+            <div class='divTableCell'></div>
+            <div class='divTableCell'><input type='text' value='' /></div>
+            <div class='divTableCell'>Bolt and socket</div>
+            <div class="divTableCell"><input type="button" value="Add to Cart" onclick="javascript:confirmFn();"/></div>
+        </div>
+        
+        <div id='00F' class="divTableRow">
+        
+            <div class='divTableCell'>00F</div>
+            <div class='divTableCell'>3101117</div>
+            <div class='divTableCell'><input type='text' value='1' /></div>
+            <div class='divTableCell'>COVER</div>
+            <div class='divTableCell'></div>
+            <div class='divTableCell'><input type='text' value='' /></div>
+            <div class='divTableCell'>COVER</div>
+            <div class="divTableCell"><input type="button" value="Add to Cart" onclick="javascript:confirmFn();"/></div>
+
+        </div>
+        
+        <div id='00G' class="divTableRow">
+        
+            <div class='divTableCell'>00G</div>
+            <div class='divTableCell'>4315607</div>
+            <div class='divTableCell'><input type='text' value='1' /></div>
+            <div class='divTableCell'>PLUG</div>
+            <div class='divTableCell'></div>
+            <div class='divTableCell'><input type='text' value='' /></div>
+            <div class='divTableCell'>PLUG</div>
+            <div class="divTableCell"><input type="button" value="Add to Cart" onclick="javascript:confirmFn();"/></div>
+
+        </div>
+        
+        <div id='01' class="divTableRow">
+        
+            <div class='divTableCell'>01</div>
+            <div class='divTableCell'>J931600</div>
+            <div class='divTableCell'><input type='text' value='4' /></div>
+            <div class='divTableCell'>BOLT</div>
+            <div class='divTableCell'></div>
+            <div class='divTableCell'><input type='text' value='' /></div>
+            <div class='divTableCell'>BOLT</div>
+            <div class="divTableCell"><input type="button" value="Add to Cart" onclick="javascript:confirmFn();"/></div>
+
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function(e) {
+    $('img[usemap]').rwdImageMaps();
+});
+</script>
+</body>
+
+</html>
